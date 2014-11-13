@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>We Write Perl</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="New, modern Perl is being written all the time">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>We Write Perl</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h4>
+            <a href="https://github.com/search?o=desc&q=language%3APerl&s=updated&type=Repositories">language:Perl</a>
+            <small class="pull-right">
+              <a href="https://github.com">
+                <img src="images/GitHub-Mark-32px.png"
+                     height="24" width="24"
+                     alt="GitHub">
+              </a>
+            </small>
+          </h4>
+          <div id="events"></div>
+        </div>
+        <div id="twitter" class="col-xs-6">
+          <a class="twitter-timeline"
+             data-widget-id="532986918259023872"
+             data-chrome="noborders nofooter transparent"
+             href="https://twitter.com/hashtag/perl">
+             #perl tweets
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hidden" id="github-template">
+      <blockquote id="{id}">
+        <img src="{owner_avatar}"
+             title="{owner_name}"
+             alt="{owner_name}"
+             width="50" height="50"
+             class="img-rounded pull-left">
+        <p>{description}</p>
+        <footer>
+          <a href="{link}">{source}</a>,
+          pushed <span class="timestamp" data-timestamp="{pushed_at}">
+            {pushed_ago}
+          </span>
+        </footer>
+      </blockquote>
+    </div>
+    <script>window.twttr = (function (d, s, id) {
+      var t, js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src= "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+      return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+    }(document, "script", "twitter-wjs"));</script>
+    <script type="text/javascript" src="/js/pearls.js"></script>
+  </body>
+</html>
+<!-- vim: set sw=2 ts=2: -->
