@@ -13,7 +13,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>We Write Perl</h1>
+      <h1>
+        We Write Perl
+        <small class="pull-right">
+          <a href="http://perl.org">perl.org</a>
+          · <a href="http://perldoc.org">perldoc</a>
+          · <a href="https://metacpan.org">metacpan</a>
+        </small>
+      </h1>
       <div class="row">
         <div class="col-xs-6">
           <h4>
@@ -40,11 +47,13 @@
     </div>
     <div class="hidden" id="github-template">
       <blockquote id="{id}">
-        <img src="{owner_avatar}"
-             title="{owner_name}"
-             alt="{owner_name}"
-             width="50" height="50"
-             class="img-rounded pull-left">
+        <a href="{owner_url}" class="pull-left avatar">
+          <img src="{owner_avatar}"
+               title="{owner_name}"
+               alt="{owner_name}"
+               width="50" height="50"
+               class="img-rounded">
+        </a>
         <p>{description}</p>
         <footer>
           <a href="{link}">{source}</a>,

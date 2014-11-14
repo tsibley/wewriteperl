@@ -25,7 +25,7 @@ blockquote {
     margin-left: 0;
 }
 
-blockquote img.pull-left {
+blockquote .avatar {
     margin-right: 10px;
     padding-left: 0;
 }

@@ -108,7 +108,8 @@ var show_github = function(response) {
                 pushed_at:      repo.pushed_at,
                 pushed_ago:     pretty_date(new Date(repo.pushed_at)),
                 owner_name:     repo.owner.login,
-                owner_avatar:   repo.owner.avatar_url
+                owner_avatar:   repo.owner.avatar_url,
+                owner_url:      repo.owner.html_url
             };
             if (!data.description) data.description = repo.full_name
             return data;
