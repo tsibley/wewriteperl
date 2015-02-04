@@ -59,15 +59,17 @@ var request = function(url) {
     document.head.removeChild(script);
 };
 
-var update_github = function() {
-    var url = 'https://api.github.com/search/repositories?' + qs({
-        q:          "language:perl",
-        sort:       "updated",
-        order:      "desc",
-        per_page:   20,
-        callback:   "show_github",
-    });
-    request(url);
+var update_github = function(language) {
+    return function(){
+        var url = 'https://api.github.com/search/repositories?' + qs({
+            q:          "language:" + language,
+            sort:       "updated",
+            order:      "desc",
+            per_page:   20,
+            callback:   "show_github",
+        });
+        request(url);
+    };
 };
 
 var poll = function(fn, interval) {
@@ -126,5 +128,6 @@ var update_timestamps = function() {
     });
 };
 
-poll(update_github, 6);
+poll(update_github("perl"), 12);
+poll(update_github("perl6"), 13);
 poll(update_timestamps, 22);
